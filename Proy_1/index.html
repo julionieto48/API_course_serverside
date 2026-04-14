@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> API ex 1</title>
+</head>
+<body>
+
+    <img src="" id="product-image" width="500" >
+    
+    <script>
+        
+        // 1. Hacer una petición a la API de productos de la escuela JS y mostrar el resultado en consola.
+        fetch('https://api.escuelajs.co/api/v1/products/').then(response => 
+        {response.json()
+            console.log(response)
+        })
+
+        // 2. Hacer una petición a la API de un producto específico y mostrar las imágenes en consola.
+
+        fetch('https://api.escuelajs.co/api/v1/products/4').then(response => response.json())
+        .then(product => {
+            console.log(product.images);
+        });
+
+        // 3. Hacer una petición a la API de un producto específico y mostrar la primera imagen en el HTML.
+        fetch('https://api.escuelajs.co/api/v1/products/4')
+        .then(response => response.json())
+        .then(product => {
+            const img = document.getElementById('product-image');
+    
+            // tomar la primera imagen
+             img.src = product.images[0];
+        });
+
+    </script>
+</body>
+</html>
