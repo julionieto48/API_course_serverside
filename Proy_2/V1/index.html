@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Karaoke Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #aaa;
+      text-align: center;
+    }
+    .line {
+      font-size: 20px;
+      margin: 8px 0;
+    }
+    .active {
+      color: #1db954; /* verde Spotify 😏 */
+      font-size: 26px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎤 Karaoke App</h1>
+
+  <audio id="audio" controls src="song.mp3"></audio>
+
+  <div id="lyrics"></div>
+
+  <script src="karaoke.js"></script>
+</body>
+</html>

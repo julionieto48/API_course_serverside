@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title> Karaoke App</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-left: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #1db954;
+      color: white;
+    }
+
+    #results {
+      margin-top: 20px;
+    }
+
+    .song {
+      padding: 10px;
+      margin: 8px auto;
+      width: 300px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .song:hover {
+      background: #222;
+    }
+
+    #lyrics {
+      margin-top: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .line {
+      margin: 5px 0;
+      color: #aaa;
+    }
+
+    .active {
+      color: #1db954;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Karaoke App</h1>
+
+  <!-- 🔍 Buscador -->
+  <input type="text" id="searchInput" placeholder="Ej: Human The Killers">
+  <button onclick="buscar()">Buscar</button>
+
+  <!-- 🔍 Resultados -->
+  <div id="results"></div>
+
+  <!-- 🎧 Audio -->
+  <audio id="audio" controls></audio>
+
+  <!-- 🎶 Letras -->
+  <div id="lyrics"></div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
